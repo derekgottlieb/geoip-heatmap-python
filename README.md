@@ -71,8 +71,7 @@ $ tar -zxf GeoIP-Python-1.2.7.tar.gz
 $ cd GeoIP-Python-1.2.7
 ```
 
-# Modify library_dirs and include_dirs variables in setup.py to include our
-# GeoIP C library install directory
+#### Modify library_dirs and include_dirs variables in setup.py to include our GeoIP C library install directory
 ```
 $ vim setup.py
 
