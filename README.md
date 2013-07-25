@@ -34,6 +34,7 @@ Full install process for all prerequisites
 ==========================================
 
 These instructions will walk you through the following:
+
 1. Download latest GeoIP database
 
 2. Download and install C/Python libraries to work with local GeoIP database
@@ -50,10 +51,10 @@ These instructions will walk you through the following:
 
 1. Grab a copy of GeoIP database to do local queries
 
-```
-$ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
-$ gunzip GeoLiteCity.dat.gz
-```
+ ```
+ $ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+ $ gunzip GeoLiteCity.dat.gz
+ ```
 
 2. Download and install C/Python libraries to work with local GeoIP database
 
