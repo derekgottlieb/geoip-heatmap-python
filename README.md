@@ -35,12 +35,18 @@ Full install process for all prerequisites
 
 These instructions will walk you through the following:
 1. Download latest GeoIP database
+
 2. Download and install C/Python libraries to work with local GeoIP database
+
 3. Download prerequisites for heatmap Python script
+
 4. Generate list of recent IP addresses
-5. Convert list of recent IP addresses into their latitude/longitude
-   coordinates based on GeoIP database
+
+5. Convert list of recent IP addresses into their latitude/longitude coordinates based on GeoIP database
+
 6. Generate heatmap image using this location data
+
+### Prepare GeoIP data
 
 1. Grab a copy of GeoIP database to do local queries
 
