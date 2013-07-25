@@ -22,13 +22,12 @@ This procedure leverages several existing libraries and tools:
 - Python script that uses the OpenStreetMap/Imaging libraries to generate a
   heatmap to visualize a set latitude/longitude coordinates
 
-Using the above, we wrote a quick Python script to perform GeoIP lookups for
+Using the above, I wrote a quick Python script to perform GeoIP lookups for
 all IP addresses listed in an input file that we can then feed into the heatmap
 script to generate our map.
 
-This document will run through a quick example using the tools we've already
-built for the example or alternatively walk you through building all of the
-prerequisite tools in your home directory.
+This document will walk you through building all of the prerequisite tools in
+your home directory.
 
 
 Full install process for all prerequisites
