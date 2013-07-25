@@ -47,18 +47,16 @@ These instructions will walk you through the following:
 
 6. Generate heatmap image using this location data
 
-### Prepare GeoIP data
-
-1. Grab a copy of GeoIP database to do local queries
+### Grab a copy of GeoIP database to do local queries
 
  ```
  $ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
  $ gunzip GeoLiteCity.dat.gz
  ```
 
-2. Download and install C/Python libraries to work with local GeoIP database
+### Download and install C/Python libraries to work with local GeoIP database
 
-### Install GeoIP C library
+#### Install GeoIP C library
 ```
 $ cd $HOME/geoip-heatmap-python
 $ wget https://www.maxmind.com/download/geoip/api/c/GeoIP-1.4.8.tar.gz
@@ -71,7 +69,7 @@ $ export PATH=$HOME/geoip-heatmap-python/build/bin
 $ export LD_LIBRARY_PATH=$HOME/geoip-heatmap-python/build/lib:$LD_LIBRARY_PATH
 ```
 
-### Install GeoIP Python library
+#### Install GeoIP Python library
 ```
 $ cd $HOME/geoip-heatmap-python
 $ wget https://www.maxmind.com/download/geoip/api/python/GeoIP-Python-1.2.7.tar.gz
@@ -79,7 +77,7 @@ $ tar -zxf GeoIP-Python-1.2.7.tar.gz
 $ cd GeoIP-Python-1.2.7
 ```
 
-#### Modify library_dirs and include_dirs variables in setup.py to include our GeoIP C library install directory
+##### Modify library_dirs and include_dirs variables in setup.py to include our GeoIP C library install directory
 ```
 $ vim setup.py
 
@@ -88,9 +86,9 @@ $ python setup.py install --prefix=$HOME/geoip-heatmap-python/build
 $ export PYTHONPATH=$HOME/geoip-heatmap-python/build/lib64/python2.6/site-packages/:$PYTHONPATH
 ```
 
-3. Download prerequisites for heatmap Python script
+### Download prerequisites for heatmap Python script
 
-### osmviz - python library to work with OpenStreetMap
+#### osmviz - python library to work with OpenStreetMap
 ```
 $ cd $HOME/geoip-heatmap-python
 $ wget https://github.com/cbick/osmviz/archive/master.tar.gz
@@ -98,7 +96,7 @@ $ tar -zxf osmviz-master.tar.gz
 $ cp -R osmviz-master/src/* $HOME/geoip-heatmap-python/build/lib64/python2.6/site-packages/
 ```
 
-### PIL - python imaging library
+#### PIL - python imaging library
 ```
 $ cd $HOME/geoip-heatmap-python
 $ wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
@@ -108,15 +106,14 @@ $ python setup.py install --prefix=$HOME/geoip-heatmap-python/build
 ```
 
 
-4. Generate list of recent IP addresses
+### Generate list of recent IP addresses
 
 ```
 $ cd $HOME/geoip-heatmap-python
 $ last -i | awk '{print $3}' | grep ^[0-9] > recent-ips.txt
 ```
 
-5. Convert list of recent IP addresses into their latitude/longitude
-   coordinates based on GeoIP database
+### Convert list of recent IP addresses into their latitude/longitude coordinates based on GeoIP database
 
 ```
 $ cd $HOME/geoip-heatmap-python
@@ -124,9 +121,10 @@ $ python geolite.py recent-ips.txt > recent-ips.points
 ```
 
 
-6. Generate heatmap image using this location data
+### Generate heatmap image using this location data
 
-### Get the heatmap python script from http://www.sethoscope.net/heatmap/
+Get the heatmap python script from http://www.sethoscope.net/heatmap/
+
 ```
 $ cd $HOME/geoip-heatmap-python
 $ wget http://www.sethoscope.net/heatmap/heatmap.py
