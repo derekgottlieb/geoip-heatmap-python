@@ -1,7 +1,9 @@
 geoip-heatmap-python
 ====================
 
-Example python to generate heatmaps using GeoIP data from a list of IP addresses
+Example python to perform GeoIP lookups for a list of IP addresses and then
+generate heatmap using http://www.sethoscope.net/heatmap/
+
 
 Overview
 ========
