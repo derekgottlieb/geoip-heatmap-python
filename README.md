@@ -65,7 +65,7 @@ $ cd GeoIP-1.4.8
 $ ./configure --prefix=$HOME/geoip-heatmap-python/build
 $ make
 $ make install
-$ export PATH=$HOME/geoip-heatmap-python/build/bin
+$ export PATH=$HOME/geoip-heatmap-python/build/bin:$PATH
 $ export LD_LIBRARY_PATH=$HOME/geoip-heatmap-python/build/lib:$LD_LIBRARY_PATH
 ```
 
