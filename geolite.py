@@ -3,7 +3,7 @@
 # Script to query local GeoIP db for a list of IP addresses to generate a
 # series of latitude/longitude coordinate pairs
 #
-# Created 2012-12-03 by Derek Gottlieb <derek@asc.edu>
+# Created 2012-12-03 by Derek Gottlieb <derek.gottlieb@gmail.com>
 
 import GeoIP
 import sys
